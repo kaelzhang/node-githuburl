@@ -55,6 +55,8 @@ parsed.host;
 // -> 'abc.github.com'
 ```
 
-### gu(str, includeFormats)
+### gu(str)
 
 - str `String` could be either a scp-like syntax ssh url(as above), or http(s) url or something else.
+
+Returns `Object` the parsed object.
