@@ -18,28 +18,36 @@ $ npm install githuburl --save
 var gu = require('githuburl');
 var str = 'git@github.com:kaelzhang/node-githuburl.git'
 
-gu.toHttp(str);
-// -> http://github.com/kaelzhang/node-githuburl
-
-gu.toHttps(str);
-// -> https://github.com/kaelzhang/node-githuburl
-
-gu.toSSH(str);
-// -> git@github.com:kaelzhang/node-githuburl.git
-
-gu.toGit(str);
-// -> git://github.com/kaelzhang/node-githuburl.git
-
-var parsed = gu.parse(url);
-
-gu.formatHttp(parsed);
-gu.formatHttps(parsed);
-gu.formatSSH(parsed);
-gu.formatGit(parsed);
+gu(str);
 ```
 
-### gu.parse(str)
+Then we will get:
+```js
+{
+  user: 'kaelzhang',
+  repo: 'node-githuburl',
+  ssh_user: 'git',
+  host: 'github.com'
+}
+```
 
-### gu.toXXX(str)
+If we pass the second parameter with `true`: `gu(str, true)`, we will get:
 
-### gu.formatXXX(obj)
+```js
+{
+  user: 'kaelzhang',
+  repo: 'node-githuburl',
+  ssh_user: 'git',
+  host: 'github.com',
+  https_href: 'https://github.com/kaelzhang/node-githuburl'
+  https_clone_url: 'https://github.com/kaelzhang/node-githuburl.git',
+  ssh_clone_url: 'git@github.com:kaelzhang/node-githuburl.git',
+  git_clone_url: 'git://github.com/kaelzhang/node-githuburl.git'
+  
+}
+```
+
+### gu(str, includeFormats)
+
+- str `String`
+- includeFormats `Boolean=false` whether the returnValue contains formatted urls.
