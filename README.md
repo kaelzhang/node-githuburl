@@ -42,9 +42,23 @@ If we pass the second parameter with `true`: `gu(str, true)`, we will get:
   https_href: 'https://github.com/kaelzhang/node-githuburl'
   https_clone_url: 'https://github.com/kaelzhang/node-githuburl.git',
   ssh_clone_url: 'git@github.com:kaelzhang/node-githuburl.git',
-  git_clone_url: 'git://github.com/kaelzhang/node-githuburl.git'
-  
+  git_clone_url: 'git://github.com/kaelzhang/node-githuburl.git' 
 }
+```
+
+##### Also prepared for complex cases
+
+Which you don't need to worry about.
+
+```js
+var str = vip_account@abc.github.com:kaelzhang/node-githuburl.git
+var parsed = gu(str, true);
+
+parsed.ssh_user;
+// -> 'vip_account';
+
+parsed.host;
+// -> 'abc.github.com'
 ```
 
 ### gu(str, includeFormats)
