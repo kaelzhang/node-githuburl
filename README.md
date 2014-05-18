@@ -17,21 +17,12 @@ $ npm install githuburl --save
 ```js
 var gu = require('githuburl');
 var str = 'git@github.com:kaelzhang/node-githuburl.git'
+// `str` could be either a scp-like syntax ssh url(as above), or http(s) url or something else.
 
 gu(str);
 ```
 
 Then we will get:
-```js
-{
-  user: 'kaelzhang',
-  repo: 'node-githuburl',
-  ssh_user: 'git',
-  host: 'github.com'
-}
-```
-
-If we pass the second parameter with `true`: `gu(str, true)`, we will get:
 
 ```js
 {
@@ -39,19 +30,22 @@ If we pass the second parameter with `true`: `gu(str, true)`, we will get:
   repo: 'node-githuburl',
   ssh_user: 'git',
   host: 'github.com',
-  https_href: 'https://github.com/kaelzhang/node-githuburl'
+  
+  // Actually the properties below are all getters,
+  // which you need not to concern about the performance.
+  https_href: 'https://github.com/kaelzhang/node-githuburl',
   https_clone_url: 'https://github.com/kaelzhang/node-githuburl.git',
   ssh_clone_url: 'git@github.com:kaelzhang/node-githuburl.git',
   git_clone_url: 'git://github.com/kaelzhang/node-githuburl.git' 
 }
 ```
 
-##### Also prepared for complex cases
+#### Also prepared for complex cases
 
 Which you don't need to worry about.
 
 ```js
-var str = vip_account@abc.github.com:kaelzhang/node-githuburl.git
+var str = 'https://vip_account@abc.github.com/kaelzhang/node-githuburl.git';
 var parsed = gu(str, true);
 
 parsed.ssh_user;
@@ -63,5 +57,4 @@ parsed.host;
 
 ### gu(str, includeFormats)
 
-- str `String`
-- includeFormats `Boolean=false` whether the returnValue contains formatted urls.
+- str `String` could be either a scp-like syntax ssh url(as above), or http(s) url or something else.
