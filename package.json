@@ -1,17 +1,17 @@
 {
   "name": "githuburl",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Parse a github repo url into an object of repo information and convert to several types of clone URL. ",
   "main": "index.js",
   "scripts": {
     "test": "make test"
   },
   "keywords": [
-    "github-url",
     "github",
+    "url",
+    "github-url",
     "repo",
     "object",
-    "url",
     "ssh",
     "git",
     "https",
