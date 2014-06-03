@@ -21,9 +21,11 @@ function GithubURL (str) {
 var proto = GithubURL.prototype;
 
 var GETTERS = {
+  http_href: function () {
+    return 'http://' + gu._formatURL(this);
+  },
   https_href: function () {
     return 'https://' + gu._formatURL(this);
-      
   },
   https_clone_url: function () {
     return 'https://' + gu._formatURL(this) + '.git';
