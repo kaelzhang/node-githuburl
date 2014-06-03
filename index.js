@@ -30,6 +30,9 @@ var GETTERS = {
   https_clone_url: function () {
     return 'https://' + gu._formatURL(this) + '.git';
   },
+  http_clone_url: function () {
+    return 'http://' + gu._formatURL(this) + '.git';
+  },
   ssh_clone_url: function () {
     return gu._formatURL(this, ':', true) + '.git';
   },
