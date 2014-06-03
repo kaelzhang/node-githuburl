@@ -33,7 +33,9 @@ Then we will get:
   
   // Actually the properties below are all getters,
   // which you need not to concern about the performance.
+  http_href: 'http://github.com/kaelzhang/node-githuburl',
   https_href: 'https://github.com/kaelzhang/node-githuburl',
+  http_clone_url: 'http://github.com/kaelzhang/node-githuburl.git',
   https_clone_url: 'https://github.com/kaelzhang/node-githuburl.git',
   ssh_clone_url: 'git@github.com:kaelzhang/node-githuburl.git',
   git_clone_url: 'git://github.com/kaelzhang/node-githuburl.git' 

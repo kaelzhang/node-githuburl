@@ -1,6 +1,6 @@
 {
   "name": "githuburl",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Parse a github repo url into an object of repo information and convert to several types of clone URL. ",
   "main": "index.js",
   "scripts": {
