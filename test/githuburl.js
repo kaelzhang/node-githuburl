@@ -26,7 +26,9 @@ var cases = [
 
   // Actually the properties below are all getters,
   // which you need not to concern about the performance.
+  http_href: 'https://vip@vip.github.com/kaelzhang/node-githuburl',
   https_href: 'https://vip@vip.github.com/kaelzhang/node-githuburl',
+  http_clone_url: 'https://vip@vip.github.com/kaelzhang/node-githuburl.git',
   https_clone_url: 'https://vip@vip.github.com/kaelzhang/node-githuburl.git',
   ssh_clone_url: 'vip@vip.github.com:kaelzhang/node-githuburl.git',
   git_clone_url: 'git://vip@vip.github.com/kaelzhang/node-githuburl.git' 
